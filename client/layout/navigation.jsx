@@ -1,3 +1,9 @@
-/**
- * Created by Vanessa on 3/1/2016.
- */
+Navigation = React.createClass({
+    render() {
+        return (
+            <nav>
+                <p>Navigation</p>
+            </nav>
+        )
+    }
+});

@@ -69,18 +69,24 @@ ArticleOverview = React.createClass({
 
         return (
 
+            <div className ="knopje" >
+
+                <button type="button" ref="inspirationButton" onClick={this.toggleButton}>toggle inspiration articles</button>
+
+
+
             <div className="container">
 
-                    <h1>Article List</h1>
 
-                    <button type="button" ref="inspirationButton" onClick={this.toggleButton}>toggle inspiration articles</button>
+
+
 
                 <ul>
 
                     {this.renderArticles()}
 
                 </ul>
-
+            </div>
             </div>
 
         );

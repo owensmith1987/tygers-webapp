@@ -9,6 +9,7 @@ MainLayout = React.createClass({
         return (
             <div>
                 <Header />
+                <Navigation />
                 <div className="container">
                     {this.props.content}
                 </div>
@@ -16,6 +17,4 @@ MainLayout = React.createClass({
             </div>
 )
 }
-});/**
- * Created by Vanessa on 2/27/2016.
- */
+});
