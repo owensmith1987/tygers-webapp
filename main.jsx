@@ -10,9 +10,10 @@ MainLayout = React.createClass({
             <div>
                 <Header />
                 <Navigation />
-                <div className="container">
+
+                <section>
                     {this.props.content}
-                </div>
+                </section>
                 <Footer />
             </div>
 )
