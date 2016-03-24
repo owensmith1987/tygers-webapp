@@ -13,7 +13,10 @@ Article = React.createClass({
 
     },
 
-    render() {
+
+
+    render()
+    {
 
         return (
             <article>
@@ -42,8 +45,6 @@ Article = React.createClass({
                         {this.props.article.articleIntro}
 
                     </div>
-
-
 
                 </div>
             </article>

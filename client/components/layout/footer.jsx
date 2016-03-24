@@ -2,9 +2,9 @@
 Footer = React.createClass({
     render() {
         return (
-            <div className="footer">
+            <footer>
                 <p>This is the footer.</p>
-            </div>
+            </footer>
         )
     }
 });

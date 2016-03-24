@@ -9,7 +9,9 @@ AdminPanel = React.createClass({
 
         return {
 
-            toggleInspiration: false
+            toggleInspiration: false,
+            setArticleFeatured: false
+
 
 
 
@@ -40,6 +42,16 @@ AdminPanel = React.createClass({
         };
 
     },
+    toggleArticleFeatured()
+    {
+        this.setState({
+
+            setArticleFeatured: ! this.state.setArticleFeatured
+
+        });
+    },
+
+
 
 
     handleSubmit(event) {
@@ -64,7 +76,11 @@ AdminPanel = React.createClass({
 
             articleContent: articleContent,
 
-            createdAt: new Date("<YYYY-mm-dd>") // current time
+            articleIsFeatured: this.state.setArticleFeatured,
+
+            createdAt: new Date("<YYYY-mm-dd>") // cu
+
+            // rrent time
 
         });
 
@@ -137,6 +153,16 @@ AdminPanel = React.createClass({
                     </form>
 
                     <button type="submit" form="articleInputForm" onClick={this.handleSubmit}>Submit</button>
+
+                    <input
+
+                        type="checkbox"
+
+                        readOnly={true}
+
+                        checked={this.state.setArticleFeatured}
+
+                        onClick={this.toggleArticleFeatured} />
 
                 </header>
 
