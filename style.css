@@ -12,7 +12,7 @@
     }
     nav ul{
 
-        background-color: #282828;
+
         list-style: none;
         text-align: center;
         padding: 0;
@@ -23,7 +23,6 @@
         font-size: 1.2em;
         line-height: 40px;
         height: 40px;
-        border-bottom: 1px solid #888;
         display: inline-block;
 
     }
@@ -55,7 +54,7 @@ li a {
         /* Then we define how is distributed the remaining space */
         justify-content: flex-start;
 
-        min-height: 300px;
+
 
 
 
@@ -91,61 +90,16 @@ li a {
 
 
     /*main article inner box*/
-    .article-container {
 
-        background-color: #d0edf5;
-        min-width: 33.33%;
-
-
-
-
-    }
     .featured-article-container{
 
         background-color: Green;
 
-        min-width: 33.33%;
-        min-height: 300px;
+
+
 
     }
 
-    .article-column-type {
-        float: left;
-        width: 100%;
-        background-color: inherit;
-        text-align: center;
-    }
-
-    .article-title {
-        float: left;
-        width: 100%;
-        background-color: inherit;
-
-        text-align: center;
-    }
-
-    .article-intro {
-        float: left;
-        width: 100%;
-        background-color: inherit;
-
-        text-align: center;
-    }
-
-    .article-content {
-        float: left;
-        width: 100%;
-        background-color: inherit;
-
-    }
-
-    .article-date {
-        float: right;
-        width: 100%;
-        background-color: inherit;
-
-        text-align: center;
-    }
 
     footer {
 

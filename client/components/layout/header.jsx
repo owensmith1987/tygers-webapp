@@ -1,8 +1,14 @@
 // This is inside header.jsx
 Header = React.createClass({
     render() {
+
+        var headerStyle = {
+
+
+        }
+
         return (
-            <header>
+            <header style={headerStyle}>
 
 
                 <Navigation />

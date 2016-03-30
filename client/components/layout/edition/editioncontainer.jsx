@@ -81,33 +81,48 @@ EditionContainer = React.createClass({
 
 
 
-
-    renderFeaturedArticles(){
-
-        return this.data.articles.map((article) => {
-
-            if(article.articleIsFeatured == true)
-            {
-                return <FeaturedArticle
-
-                    key={article._id} article={article}
-
-                    />;
-            }
-        })
-
-    },
-
-
-    renderArticles() {
-
+    renderFeaturedArticles()
+    {
         // Get articles from this.data.articles
 
         return this.data.articles.map((article) => {
 
-            if(article.articleIsFeatured == false)
+
+            if(article.articleIsFeatured == true && article.articleColumn == "Inspiration" )
             {
-                return <Article
+                return <InspirationFeaturedArticle
+
+                    key={article._id} article={article}
+
+                />;
+            }
+            if(article.articleIsFeatured == true && article.articleColumn == "Motivation" )
+            {
+                return <MotivationFeaturedArticle
+
+                    key={article._id} article={article}
+
+                />;
+            }
+            if(article.articleIsFeatured == true && article.articleColumn == "Life" )
+            {
+                return <LifeFeaturedArticle
+
+                    key={article._id} article={article}
+
+                />;
+            }
+            if(article.articleIsFeatured == true && article.articleColumn == "Style" )
+            {
+                return <StyleFeaturedArticle
+
+                    key={article._id} article={article}
+
+                />;
+            }
+            if(article.articleIsFeatured == true && article.articleColumn == "More" )
+            {
+                return <MoreFeaturedArticle
 
                     key={article._id} article={article}
 
@@ -118,25 +133,108 @@ EditionContainer = React.createClass({
     },
 
 
+    renderArticles() {
+
+        // Get articles from this.data.articles
+
+        return this.data.articles.map((article) => {
+
+            if(article.articleIsFeatured == false && article.articleColumn == "Inspiration" )
+            {
+                return <InspirationArticle
+
+                    key={article._id} article={article}
+
+                />;
+            }
+            if(article.articleIsFeatured == false && article.articleColumn == "Motivation" )
+            {
+                return <MotivationArticle
+
+                    key={article._id} article={article}
+
+                />;
+            }
+            if(article.articleIsFeatured == false && article.articleColumn == "Life" )
+            {
+                return <LifeArticle
+
+                    key={article._id} article={article}
+
+                />;
+            }
+            if(article.articleIsFeatured == false && article.articleColumn == "Style" )
+            {
+                return <StyleArticle
+
+                    key={article._id} article={article}
+
+                />;
+            }
+            if(article.articleIsFeatured == false && article.articleColumn == "More" )
+            {
+                return <MoreArticle
+
+                    key={article._id} article={article}
+
+                />;
+            }
+        });
+
+    },
+
+
+
+
     render() {
 
+        var featuredArticlesContainer = {
+
+            display: 'flex',
+
+            flexDirection: 'row',
+
+            flewWrap: 'wrap',
+
+            justifyContent: 'center',
+
+
+
+        };
+
+        var section = {
+            display: 'block',
+            width: '90%',
+            margin: '0',
+            margin: 'auto',
+
+        };
+
+        var articlesContainer = {
+
+
+            width: '100%',
+            display: '-webkit-box',
+            display: 'moz-box',
+            display: '-ms-flexbox',
+            display: '-moz-flex',
+            display: '-webkit-flex',
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            justifyContent: 'left',
+
+
+        };
+
         return (
-                <section>
+                <section style ={section}>
 
-                <div className="featured-articles-container">{this.renderFeaturedArticles()}</div>
+                <div style={featuredArticlesContainer}>{this.renderFeaturedArticles()}</div>
 
-
-
-
-
-                <div className="articles-container">{this.renderArticles()}</div>
-
+                <div style={articlesContainer}>{this.renderArticles()}</div>
 
                 </section>
-
-
-
-
 
         );
 
