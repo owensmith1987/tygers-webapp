@@ -17,48 +17,94 @@ MoreArticle = React.createClass({
     render()
     {
         var article = {
-            minWidth: '300px',
-            width: '25%',
+
+
+            flexOrder:'5',
+            minWidth: '25%',
             height: '300px'
 
         }
 
         var moreArticleContainer = {
 
-            display: 'block',
-            margin: '0',
+
             margin: 'auto',
-            width: '95%',
-            height: '95%',
-            backgroundColor: 'YellowGreen'
+            width: '99%',
+            height: '99%',
+            backgroundColor: 'White',
+            position: 'relative'
 
         };
+
+        var moreArticleColumnBox ={
+
+            left: '5%',
+            top: '65%',
+            position: 'absolute',
+            width: '80px',
+            height: '20px',
+            backgroundColor:'Gold',
+
+
+        };
+
+        var moreArticleTitleBox = {
+
+            width: '100%',
+            height: '30%',
+            backgroundColor: 'rgba(255,0,0,  1)',
+            position: 'absolute',
+            top: '70%',
+
+        };
+
+        var moreArticleColumnBoxText = {
+
+            textAlign: 'center',
+            color: 'white'
+
+        }
+
+        var moreArticleContent ={
+
+            display: 'none'
+
+        };
+
+        var h1 = {
+
+            left: '5%',
+            position: 'absolute',
+            color: 'white'
+
+        }
 
         return (
             <article style={article}>
                 <div style={moreArticleContainer} className="article-container">
 
-                    <div className="article-column-type">
 
-                        {this.props.article.articleColumn}
 
-                    </div>
+                    <div style={moreArticleTitleBox}>
 
-                    <div className="article-title">
-
-                        {this.props.article.articleTitle}
+                        <h1 style={h1}>
+                            {this.props.article.articleTitle}
+                        </h1>
 
                     </div>
 
-                    <div className="article-date">
+                    <div style = {moreArticleColumnBox}>
 
-                        {this.props.article.createdAt.toDateString()}
+                        <div style = {moreArticleColumnBoxText} >
+                            {this.props.article.articleColumn}
+                        </div>
 
                     </div>
 
-                    <div className="article-content">
+
+                    <div style ={moreArticleContent}>
                         <p></p>
-                        {this.props.article.articleIntro}
+                        {this.props.article.articleContent}
 
                     </div>
 

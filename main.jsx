@@ -7,15 +7,16 @@ Articles = new Mongo.Collection("articles");
 MainLayout = React.createClass({
     render() {
 
-        var basicBackground = {
+        var mainWrapper= {
 
-            backgroundColor: '#C3C3C3'
+            top:'0px',
+            left: '0px'
+        }
 
-        };
 
 
         return (
-            <div style={basicBackground}>
+            <div style={mainWrapper}>
                 <Header />
 
 

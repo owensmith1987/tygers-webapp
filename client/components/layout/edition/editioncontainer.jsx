@@ -88,7 +88,7 @@ EditionContainer = React.createClass({
         return this.data.articles.map((article) => {
 
 
-            if(article.articleIsFeatured == true && article.articleColumn == "Inspiration" )
+            if(article.articleIsFeatured == true && article.articleColumn == "INSPIRATION" )
             {
                 return <InspirationFeaturedArticle
 
@@ -96,7 +96,7 @@ EditionContainer = React.createClass({
 
                 />;
             }
-            if(article.articleIsFeatured == true && article.articleColumn == "Motivation" )
+            if(article.articleIsFeatured == true && article.articleColumn == "MOTIVATION" )
             {
                 return <MotivationFeaturedArticle
 
@@ -104,7 +104,7 @@ EditionContainer = React.createClass({
 
                 />;
             }
-            if(article.articleIsFeatured == true && article.articleColumn == "Life" )
+            if(article.articleIsFeatured == true && article.articleColumn == "LIFE" )
             {
                 return <LifeFeaturedArticle
 
@@ -112,7 +112,7 @@ EditionContainer = React.createClass({
 
                 />;
             }
-            if(article.articleIsFeatured == true && article.articleColumn == "Style" )
+            if(article.articleIsFeatured == true && article.articleColumn == "STYLE" )
             {
                 return <StyleFeaturedArticle
 
@@ -120,7 +120,7 @@ EditionContainer = React.createClass({
 
                 />;
             }
-            if(article.articleIsFeatured == true && article.articleColumn == "More" )
+            if(article.articleIsFeatured == true && article.articleColumn == "MORE" )
             {
                 return <MoreFeaturedArticle
 
@@ -139,7 +139,7 @@ EditionContainer = React.createClass({
 
         return this.data.articles.map((article) => {
 
-            if(article.articleIsFeatured == false && article.articleColumn == "Inspiration" )
+            if(article.articleIsFeatured == false && article.articleColumn == "INSPIRATION" )
             {
                 return <InspirationArticle
 
@@ -147,7 +147,7 @@ EditionContainer = React.createClass({
 
                 />;
             }
-            if(article.articleIsFeatured == false && article.articleColumn == "Motivation" )
+            if(article.articleIsFeatured == false && article.articleColumn == "MOTIVATION" )
             {
                 return <MotivationArticle
 
@@ -155,7 +155,7 @@ EditionContainer = React.createClass({
 
                 />;
             }
-            if(article.articleIsFeatured == false && article.articleColumn == "Life" )
+            if(article.articleIsFeatured == false && article.articleColumn == "LIFE" )
             {
                 return <LifeArticle
 
@@ -163,7 +163,7 @@ EditionContainer = React.createClass({
 
                 />;
             }
-            if(article.articleIsFeatured == false && article.articleColumn == "Style" )
+            if(article.articleIsFeatured == false && article.articleColumn == "STYLE" )
             {
                 return <StyleArticle
 
@@ -171,7 +171,7 @@ EditionContainer = React.createClass({
 
                 />;
             }
-            if(article.articleIsFeatured == false && article.articleColumn == "More" )
+            if(article.articleIsFeatured == false && article.articleColumn == "MORE" )
             {
                 return <MoreArticle
 
@@ -189,21 +189,25 @@ EditionContainer = React.createClass({
     render() {
 
         var featuredArticlesContainer = {
-
+            marginTop: '80px',
+            width: '100%',
+            display: '-webkit-box',
+            display: 'moz-box',
+            display: '-ms-flexbox',
+            display: '-moz-flex',
+            display: '-webkit-flex',
             display: 'flex',
-
-            flexDirection: 'row',
-
-            flewWrap: 'wrap',
-
-            justifyContent: 'center',
+            flexDirection: 'column',
+            height: '450px',
+            flexWrap: 'wrap',
+            justifyContent: 'space-around'
 
 
 
         };
 
         var section = {
-            display: 'block',
+
             width: '90%',
             margin: '0',
             margin: 'auto',
@@ -212,7 +216,7 @@ EditionContainer = React.createClass({
 
         var articlesContainer = {
 
-
+            marginTop:'20px',
             width: '100%',
             display: '-webkit-box',
             display: 'moz-box',
@@ -222,13 +226,15 @@ EditionContainer = React.createClass({
             display: 'flex',
             flexDirection: 'row',
             flexWrap: 'wrap',
-            justifyContent: 'left',
+
+
+
 
 
         };
 
         return (
-                <section style ={section}>
+                <section style={section}>
 
                 <div style={featuredArticlesContainer}>{this.renderFeaturedArticles()}</div>
 

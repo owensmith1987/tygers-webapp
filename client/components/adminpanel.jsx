@@ -63,6 +63,8 @@ AdminPanel = React.createClass({
         var articleColumn = React.findDOMNode(this.refs.articleColumnNameTextInput).value.trim();
         var articleIntro = React.findDOMNode(this.refs.articleIntroTextInput).value.trim();
         var articleContent = React.findDOMNode(this.refs.articleContentTextInput).value.trim();
+        var articleAuthor = React.findDOMNode(this.refs.articleAuthorTextInput).value.trim();
+        var articleReadingTime = React.findDOMNode(this.refs.articleReadingTimeTextInput).value.trim();
 
 
 
@@ -75,6 +77,10 @@ AdminPanel = React.createClass({
             articleIntro: articleIntro,
 
             articleContent: articleContent,
+
+            articleAuthor: articleAuthor,
+
+            articleReadingTime: articleReadingTime,
 
             articleIsFeatured: this.state.setArticleFeatured,
 
@@ -92,7 +98,8 @@ AdminPanel = React.createClass({
         React.findDOMNode(this.refs.articleTitleTextInput).value = "";
         React.findDOMNode(this.refs.articleIntroTextInput).value = "";
         React.findDOMNode(this.refs.articleContentTextInput).value = "";
-
+        React.findDOMNode(this.refs.articleAuthorTextInput).value = "";
+        React.findDOMNode(this.refs.articleReadingTimeTextInput).value = "";
 
     },
 
@@ -147,6 +154,22 @@ AdminPanel = React.createClass({
                             ref="articleContentTextInput"
 
                             placeholder="Input Article Content" />
+
+                        <input
+
+                            type="text"
+
+                            ref="articleAuthorTextInput"
+
+                            placeholder="Input Article Author" />
+
+                        <input
+
+                            type="text"
+
+                            ref="articleReadingTimeTextInput"
+
+                            placeholder="Input Article ReadingTime" />
 
 
 

@@ -17,48 +17,94 @@ StyleArticle = React.createClass({
     render()
     {
         var article = {
-            minWidth: '300px',
-            width: '25%',
+
+
+            flexOrder:'4',
+            minWidth: '25%',
             height: '300px'
 
         }
 
         var styleArticleContainer = {
 
-            display: 'block',
-            margin: '0',
+
             margin: 'auto',
-            width: '95%',
-            height: '95%',
-            backgroundColor: 'MediumTurquoise'
+            width: '99%',
+            height: '99%',
+            backgroundColor: 'White',
+            position: 'relative'
 
         };
+
+        var styleArticleColumnBox ={
+
+            left: '5%',
+            top: '65%',
+            position: 'absolute',
+            width: '80px',
+            height: '20px',
+            backgroundColor:'Gold',
+
+
+        };
+
+        var styleArticleTitleBox = {
+
+            width: '100%',
+            height: '30%',
+            backgroundColor: 'rgba(255,0,0,  1)',
+            position: 'absolute',
+            top: '70%',
+
+        };
+
+        var styleArticleColumnBoxText = {
+
+            textAlign: 'center',
+            color: 'white'
+
+        }
+
+        var styleArticleContent ={
+
+            display: 'none'
+
+        };
+
+        var h1 = {
+
+            left: '5%',
+            position: 'absolute',
+            color: 'white'
+
+        }
 
         return (
             <article style={article}>
                 <div style={styleArticleContainer} className="article-container">
 
-                    <div className="article-column-type">
 
-                        {this.props.article.articleColumn}
 
-                    </div>
+                    <div style={styleArticleTitleBox}>
 
-                    <div className="article-title">
-
-                        {this.props.article.articleTitle}
+                        <h1 style={h1}>
+                            {this.props.article.articleTitle}
+                        </h1>
 
                     </div>
 
-                    <div className="article-date">
+                    <div style = {styleArticleColumnBox}>
 
-                        {this.props.article.createdAt.toDateString()}
+                        <div style = {styleArticleColumnBoxText} >
+                            {this.props.article.articleColumn}
+                        </div>
 
                     </div>
 
-                    <div className="article-content">
+
+                    <div style ={styleArticleContent}>
                         <p></p>
-                        {this.props.article.articleIntro}
+                        {this.props.article.articleContent}
 
                     </div>
 

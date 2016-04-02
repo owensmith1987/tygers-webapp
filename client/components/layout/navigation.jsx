@@ -2,8 +2,8 @@ Navigation = React.createClass({
     render() {
 
         var nav = {
-
-
+            top: '0px',
+            position: 'fixed',
             height: '60px',
             width: '100%',
             zIndex: '9999',

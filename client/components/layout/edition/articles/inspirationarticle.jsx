@@ -19,28 +19,33 @@ InspirationArticle = React.createClass({
         var article = {
 
 
-            minWidth: '300px',
-            width: '25%',
+            flexOrder:'1',
+            minWidth: '25%',
             height: '300px'
 
         }
 
         var inspirationArticleContainer = {
 
-            display: 'block',
-            margin: '0',
+
             margin: 'auto',
-            width: '95%',
-            height: '95%',
+            width: '99%',
+            height: '99%',
             backgroundColor: 'White',
             position: 'relative'
 
         };
 
+        var inspirationPictureContainer = {
+            height: '50%',
+            backgroundImage: 'url(//lorempixel.com/640/480/transport/)',
+            backgroundSize: '100%',
+        }
+
         var inspirationArticleColumnBox ={
 
             left: '5%',
-            top: '65%',
+            top: '140px',
             position: 'absolute',
             width: '80px',
             height: '20px',
@@ -52,10 +57,10 @@ InspirationArticle = React.createClass({
         var inspirationArticleTitleBox = {
 
             width: '100%',
-            height: '30%',
-            backgroundColor: 'rgba(255,0,0,  1)',
+            height: '50%',
+
             position: 'absolute',
-            top: '70%',
+            top: '50%',
 
         };
 
@@ -76,15 +81,32 @@ InspirationArticle = React.createClass({
 
             left: '5%',
             position: 'absolute',
-            color: 'white'
+           
 
+        }
+
+        var inspirationArticleReadingTime ={
+
+            display: 'none'
+        }
+
+        var inspirationArticleAuthor = {
+
+            display: 'none'
+        }
+
+        var inspirationArticleIntro ={
+
+            display: 'none'
         }
 
         return (
             <article style={article}>
                 <div style={inspirationArticleContainer} className="article-container">
 
+                    <div style ={inspirationPictureContainer}>
 
+                    </div>
 
                     <div style={inspirationArticleTitleBox}>
 
@@ -106,6 +128,24 @@ InspirationArticle = React.createClass({
                     <div style ={inspirationArticleContent}>
                         <p></p>
                         {this.props.article.articleContent}
+
+                    </div>
+
+                    <div style={inspirationArticleReadingTime}>
+
+                        {this.props.article.articleReadingTime}
+
+                    </div>
+
+                    <div style={inspirationArticleAuthor}>
+
+                        {this.props.article.articleAuthor}
+
+                    </div>
+
+                    <div style={inspirationArticleIntro}>
+
+                        {this.props.article.articleIntro}
 
                     </div>
 
